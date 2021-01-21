@@ -1,0 +1,122 @@
+Arguments: 
+  /usr/local/Cellar/node/15.5.0/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/opt/openresty/nginx/sbin:/Users/chris/miniconda/condabin:/Users/chris/miniconda/bin:/usr/local/lib/node_modules:/Users/chris/.cargo/bin::/Users/chris/.nimble/bin:/Users/chris/bin:/usr/local/bin:/usr/local/sbin:/sbin/:/usr/sbin/:/usr/bin:/bin:/Users/chris/.resh/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  15.5.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/chris/Development/tahto/foundation/src-app/play/bug_fluentui_menu/.build/package.json: Unexpected token } in JSON at position 2441
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "kmi-redis",
+    "productName": "kmi-redis",
+    "version": "1.0.0",
+    "description": "electron gui for redis",
+    "main": ".webpack/main",
+    "scripts": {
+      "dev": "electron-forge start",
+      "package": "electron-forge package",
+      "make": "electron-forge make",
+      "publish": "electron-forge publish"
+    },
+    "keywords": [],
+    "author": {
+      "name": "Chris Zheng",
+      "email": "z@caudate.me"
+    },
+    "license": "MIT",
+    "config": {
+      "forge": {
+        "packagerConfig": {},
+        "makers": [
+          {
+            "name": "@electron-forge/maker-squirrel",
+            "config": {
+              "name": "kmi_redis_gui"
+            }
+          },
+          {
+            "name": "@electron-forge/maker-zip",
+            "platforms": [
+              "darwin"
+            ]
+          },
+          {
+            "name": "@electron-forge/maker-deb",
+            "config": {}
+          },
+          {
+            "name": "@electron-forge/maker-rpm",
+            "config": {}
+          }
+        ],
+        "plugins": [
+          [
+            "@electron-forge/plugin-webpack",
+            {
+              "mainConfig": "./config/webpack.config.frame.js",
+              "renderer": {
+                "config": "./config/webpack.config.inner.js",
+                "entryPoints": [
+                  {
+                    "html": "./main-inner.html",
+                    "js": "./main-inner.jsx",
+                    "name": "main_inner"
+                  }
+                ]
+              }
+            }
+          ]
+        ]
+      }
+    },
+    "devDependencies": {
+      "@electron-forge/cli": "^6.0.0-beta.54",
+      "@electron-forge/maker-deb": "^6.0.0-beta.54",
+      "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+      "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+      "@electron-forge/maker-zip": "^6.0.0-beta.54",
+      "@electron-forge/plugin-webpack": "6.0.0-beta.54",
+      "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+      "@sucrase/webpack-loader": "^2.0.0",
+      "babel-loader": "^8.2.2",
+      "cache-loader": "4.1.0",
+      "css-loader": "^4.2.1",
+      "electron": "11.2.0",
+      "electron-context-menu": "^2.4.0",
+      "electron-react-devtools": "^0.5.3",
+      "electron-squirrel-startup": "1.0.0",
+      "node-loader": "^1.0.1",
+      "raw-loader": "^4.0.2",
+      "react-hot-loader": "^4.13.0",
+      "style-loader": "^1.2.1",
+      "sucrase": "^3.17.0"
+    },
+    "dependencies": {
+      "@fluentui/react-northstar": "0.51.5",
+      "react": "16.14.0",
+      "react-dom": "^16.14.0",
+      "react-router-dom": "5.2.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
