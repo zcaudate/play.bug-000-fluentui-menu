@@ -1,4 +1,11 @@
+init:
+	pnpm install --shamefully-hoist
+
 dev:
 	yarn dev
-init:
-	yarn install
+
+package:
+	yarn package
+
+release: package
+	yarn release

@@ -2,7 +2,10 @@ const jsx_rule = {
   test: /\.jsx?$/,
   use: [
     { loader: "cache-loader" },
-    { loader: "@sucrase/webpack-loader", options: { transforms: ["jsx"] } },
+    {
+      loader: "@sucrase/webpack-loader",
+      options: { transforms: ["jsx"] },
+    },
   ],
 };
 

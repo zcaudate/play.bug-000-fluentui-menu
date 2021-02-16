@@ -84,10 +84,10 @@
     "sucrase": "^3.17.0"
   },
   "dependencies": {
-    "@fluentui/react-northstar": "0.51.5",
+    "@fluentui/react-northstar": "0.52.0",
     "immer": "^8.0.1",
-    "react": "16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-router-dom": "5.2.0",
     "use-immer": "^0.4.2"
   }
